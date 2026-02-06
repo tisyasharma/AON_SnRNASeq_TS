@@ -1,0 +1,119 @@
+﻿GeneName,Name,Type,NT/Receptor,CellTypeIndicated,Notes
+Abi3bp,ABI family member 3 binding protein,Protein coding,,,Allen Brain Atlas
+Adk,adenosine kinase,Protein coding,,,
+Adra2a,adrenoceptor alpha 2A,Protein coding,Dopamine,,"ADHD, Diabetes type 2"
+Ankk1,,,Dopamine,,
+App,amyloid beta (A4) precursor protein,Protein coding,,,Alzheimer's
+Arc,activity regulated cytoskeletal-associated protein,Transcription factor,,,Immediate early gene
+Atp1a1,"ATPase, Na+/K+ transporting, alpha 1 polypeptide",Protein coding,Sodium Potassium Pump,,
+Avp,arginine vasopressin,Protein coding,Vasopressin,,Neuropeptide
+Cacna1a,"calcium channel, voltage-dependent, P/Q type, alpha 1A subunit",Protein coding,Calcium voltage dependent,,
+Cacna2d1,"calcium channel, voltage-dependent, alpha2/delta subunit 1",Protein coding,Calcium voltage dependent,,Brain Cell Data Viewer
+Cacnb4,"calcium channel, voltage-dependent, beta 4 subunit",Protein coding,Calcium voltage dependent,,In cerebellum
+Calb1,Calbindin,,,Interneuon,Kay Brunjes 2014
+Calb2,Calretinin,,,Interneuron,Kay Brunjes 2014
+Calca,"calcitonin/calcitonin-related polypeptide, alpha",Protein coding,,,CGRP1
+Calcb,"calcitonin-related polypeptide, beta",Protein coding,,,CGRP2
+Calr,Calreticulin,Protein coding,,,
+Camk2d,"calcium/calmodulin-dependent protein kinase II, delta",Protein coding,Calcium binding,Interneuron,
+Cartpt,CART prepropeptide,Protein coding,,,Cocaine
+Cck,cholecystokinin,,,Interneuron,Kay Brunjes 2014
+Cckbr,cholecystokinin B receptor,Protein coding,,,
+Cd38,,,Oxytocin,,
+Cdhr1,cadherin-related family member 1,Protein coding,Calcium binding,M/T,Tepe et al. 2018
+Chat,choline O-acetyltransferase,Protein coding,Acetylcholine,,
+Chmp4b,charged multivesicular body protein 4B,Protein coding,,,
+Comt,catechol-O-methyltransferase,Protein coding,Dopamine,,
+Cplx2,complexin 2,Protein coding,Glutamate,,Calcium binding
+Crhr1,corticotropin releasing hormone receptor 1,Protein coding,Corticotropin releasing factor,GC,Tepe et al. 2018
+Cyp19a1,"cytochrome P450, family 19, subfamily A, polypeptide 1",Protein coding,,,Found in ER
+Dcx,doublecortin,Protein coding,,Interneuron,Tepe et al. 2018
+Doc2a,"double C2-like domains, alpha",Protein coding,Calcium binding,,NT release
+Doc2b,"double C2-like domains, beta",Protein coding,,,NT release
+Drd2,,,Dopamine,,
+Drd3,,,Dopamine,,
+Drd5,,,Dopamine,,
+Egr1,early growth response 1,Transcription factor,,,Immediate early gene
+Fam171b,"family with sequence similarity 171, member B",Protein coding,,,Brain Cell Data Viewer
+Fam81a,"family with sequence similarity 81, member A",Protein coding,,,Brain Cell Data Viewer
+Fos,FBJ osteosarcoma oncogene,Transcription factor,,,Immediate early gene
+Gabbr1,"gamma-aminobutyric acid (GABA) B receptor, 1",Protein coding,GABA,,
+Gabra1,"gamma-aminobutyric acid (GABA) A receptor, alpha 1",Protein coding,GABA,,
+Gabrb2,"gamma-aminobutyric acid (GABA) A receptor, beta 2",Protein coding,GABA,,
+Gad1,"glutamate decarboxylase 1 (brain, 67kDa)",Protein coding,GABA,,
+Gad2,"glutamate decarboxylase 2 (pancreatic islets and brain, 65kDa)",Protein coding,GABA,,
+Gal,galanin/GMAP prepropeptide,Protein coding,Galanin,,
+Gls2,"glutaminase 2 (liver, mitochondrial)",Protein coding,Glutamate,,
+Gng4,G protein subunit gamma 4,Protein coding,,,Allen Brain Atlas
+Gnmt,glycine N-methyltransferase,Protein coding,Glycine,,
+Grp,gastrin releasing peptide,Protein coding,Hormone,,Neuropeptide
+Hcrtr1,hypocretin (orexin) receptor 1,Protein coding,Orexin,,
+Htr1a,5-hydroxytryptamine (serotonin) receptor 1A,Protein coding,Serotonin,,
+Htr1b,5-hydroxytryptamine (serotonin) receptor 1B,Protein coding,Serotonin,,
+Htr1d,5-hydroxytryptamine (serotonin) receptor1D,Protein coding,Serotonin,,
+Htr1f,5-hydroxytryptamine (serotonin) receptor 1F,Protein coding,Serotonin,,
+Htr2a,5-hydroxytryptamine (serotonin) receptor 2A,Protein coding,Serotonin,,
+Htr2b,5-hydroxytryptamine (serotonin) receptor 2B,Protein coding,Serotonin,,
+Htr2c,5-hydroxytryptamine (serotonin) receptor 2C,Protein coding,Serotonin,,
+Htr3a,5-hydroxytryptamine (serotonin) receptor 3A,Protein coding,Serotonin,,
+Htr4,5-hydroxytryptamine (serotonin) receptor 4,Protein coding,Serotonin,,
+Htr5a,"5-hydroxytryptamine (serotonin) receptor 5A, G protein-coupled",Protein coding,Serotonin,,
+Htr6,5-hydroxytryptamine (serotonin) receptor 6,Protein coding,Serotonin,,
+Htr7,5-hydroxytryptamine (serotonin) receptor 7,Protein coding,Serotonin,,
+Htt,huntingtin,Protein coding,Diazepam,,
+Jun,jun proto-oncogene,Transcription factor,,,Immediate early gene
+Lmo3,LIM domain only 3,Protein coding,,,Brain Cell Data Viewer
+Mapt,microtubule-associated protein tau,Protein coding,,,Alzheimer's
+Mecp2,methyl CpG binding protein 2,Transcription factor,,,
+Ndst4,N-deacetylase/N-sulfotransferase (heparin glucosaminyl) 4,Protein coding,,,Allen Brain Atlas
+Nmbr,neuromedin B receptor,Protein coding,Neuromedin B,,Allen Brain Atlas
+Npas4,neuronal PAS domain protein 4,Transcription factor,,,Immediate early gene
+Npr1,natriuretic peptide receptor 1,Protein coding,,M/T,Tepe et al. 2018
+Npy,neuropeptide Y,Protein coding,Neuropeptide Y,,"Neuropeptide, Kay Brunjes 2014"
+Nr4a2,"nuclear receptor subfamily 4, group A, member 2",Transcription factor,,,
+Nts,Neurotensin,Protein coding,Neurotensin,,Axon terminal
+Nucb2,nucleobindin 2,Protein coding,Calcium binding,,
+Nxph3,neurexophilin 3,Protein coding,,,
+Ociad2,OCIA domain containing 2,Protein coding,,,Brain Cell Data Viewer
+Otof,otoferlin,Protein coding,Calcium binding,,
+Oxtr,,,Oxytocin,,
+Pcdha4,protocadherin alpha 4,Protein coding,Calcium binding,M/T,Tepe et al. 2018
+Pdyn,prodynorphin,Protein coding,Opioid,,
+Penk,preproenkephalin,Protein coding,Opioid,,"Pain, fear, startle"
+Pnoc,prepronociceptin,Protein coding,Neuropeptides,,Neuropeptide
+Pomc,pro-opiomelanocortin-alpha,Protein coding,,,
+Pou5f1,POU class 5 homeobox 1,Transcription factor,,,
+Pparg,peroxisome proliferator-activated receptor gamma,Transcription factor,,,
+Prkn,parkin RBR E3 ubiquitin protein ligase,Protein coding,,,Parkinson's
+Prom1,prominin 1,Protein coding,,,Retinitis Pigmentosa
+Pthlh,parathyroid hormone-like peptide,Protein coding,Hormone,,
+Ptk2b,PTK2 protein tyrosine kinase 2 beta,Protein coding,,,Brain Cell Data Viewer
+Pvalb,Parvalbumin,Protein coding,GABA,Interneuron,Kay Brunjes 2014
+Rai1,retinoic acid induced 1,Transcription factor,,,
+Rbfox3,"RNA binding protein, fox-1 homolog (C. elegans) 3",Transcription factor,,,"DRG, CNS, retina"
+Reln,Reelin,Protein coding,,"M/T , Pcx",
+Rps6ka3,"ribosomal protein S6 kinase, 90kDa, polypeptide 3",Protein coding,,,
+Scg3,secretogranin III,Protein coding,,,
+Slc17a6,"solute carrier family 17 (sodium-dependent inorganic phosphate cotransporter), member 6",Protein coding,Glutamate,,VGLUT2
+Slc17a7,"solute carrier family 17 (vesicular glutamate transporter), member 7",Protein coding,Glutamate,,VGLUT1
+Slc29a4,"solute carrier family 29 (equilibrative nucleoside transporter), member 4",Protein coding,,,
+Slc32a1,"solute carrier family 32 (GABA vesicular transporter), member 1",Protein coding,GABA,,
+Slc44a1,"solute carrier family 44 (choline transporter), member 1",Protein coding,Acetylcholine,,
+Slc6a15,"solute carrier family 6 (neutral amino acid transporter), member 15",Protein coding,Sodium,,Sodium and proline symporter
+Slc6a2,"solute carrier family 6 (neurotransmitter transporter), member 2",Protein coding,,,
+Slc6a3,,,Dopamine,,
+Slc9a9,"solute carrier family 9, subfamily A (NHE9, cation proton antiporter 9), member 9",Protein coding,Potassium,,
+Snap29,"synaptosomal-associated protein, 29kDa",Protein coding,,,
+Snca,"synuclein, alpha (non A4 component of amyloid precursor)",Protein coding,,,Parkinson's
+Sncb,"synuclein, beta",Protein coding,,,Parkinson's
+Sncg,"synuclein, gamma (breast cancer-specific protein 1)",Protein coding,,,
+Sst,somatostatin,Protein coding,GABA,Interneuron,Kay Brunjes 2014
+Syt1,synaptotagmin I,Protein coding,Dopamine,,
+Tac1,"tachykinin, precursor 1",Protein coding,,,
+Tbx21,T-box 21,Protein coding,,M/T,Tepe et al. 2018
+Tenm3,teneurin transmembrane protein 3,Protein coding,,,Allen Brain Atlas
+Tpbg,trophoblast glycoprotein,Protein coding,,GC,Tepe et al. 2018
+Ucn,urocortin,Protein coding,CRTH,,
+Unc13a,unc-13 homolog A (C. elegans),Protein coding,Glutamate,,
+Vip,vasoactive intestinal peptide,Protein coding,,,
+Vxn,Vexin,Protein coding,,,Brain Cell Data Viewer
