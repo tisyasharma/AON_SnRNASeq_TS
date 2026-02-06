@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# R
+.Rhistory
+.RData
+
+# Large data files
+*.h5
+*.h5ad
+*.rds
+data/allen_brain_atlas/abc_cache/
+data/allen_brain_atlas/*_metadata_with_group_membership.csv
+
+# Archive
+archive/
