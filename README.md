@@ -52,3 +52,6 @@ Top candidate markers for dorsolateral AON neurons (contralaterally-projecting):
 
 Doublet detection identified 10,884 predicted doublets (29.5%) using Scrublet.
 QC thresholds: min_genes=200, max_genes=2500, pct_mt<5%.
+
+<img width="2373" height="1774" alt="TS_UMAP" src="https://github.com/user-attachments/assets/e7e86af1-1c1c-4a24-90ec-55b9ce54e8c8" />
+
