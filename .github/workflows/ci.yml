@@ -1,0 +1,53 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install tooling
+        run: pip install ruff snakemake pyyaml
+
+      - name: Ruff lint (shared module and notebooks)
+        run: ruff check .
+
+      - name: Validate config and environment YAML
+        run: |
+          python -c "import yaml; yaml.safe_load(open('config/config.yaml'))"
+          python -c "import yaml; yaml.safe_load(open('environment.yml'))"
+
+      - name: Assert every pipeline file is tracked
+        run: |
+          git ls-files --error-unmatch \
+            notebooks/plotting_style.py \
+            notebooks/01_preprocessing.ipynb \
+            notebooks/02_clustering.ipynb \
+            notebooks/03_abca_spatial.ipynb \
+            notebooks/04_differential_expression.ipynb \
+            notebooks/05_enrichment.ipynb \
+            notebooks/06_reference_concordance.ipynb \
+            workflow/scripts/deseq2_crosscheck.R \
+            Snakefile config/config.yaml
+
+      - name: Snakemake DAG dry-run
+        run: |
+          # Placeholder inputs so the DAG resolves without the large (uncommitted) data.
+          mkdir -p data/aon_10x \
+                   data/allen_brain_atlas/abc_cache/expression_matrices/WMB-10Xv2/20230630 \
+                   data/processed results
+          touch data/aon_10x/filtered_feature_bc_matrix.h5 \
+                data/allen_brain_atlas/10x_cell_metadata_with_group_membership.csv \
+                data/allen_brain_atlas/merfish_cell_metadata_with_group_membership.csv \
+                data/allen_brain_atlas/WMB-10Xv2-OLF-log2.h5ad \
+                data/allen_brain_atlas/abc_cache/expression_matrices/WMB-10Xv2/20230630/WMB-10Xv2-OLF-raw.h5ad
+          snakemake -n --cores 1 all

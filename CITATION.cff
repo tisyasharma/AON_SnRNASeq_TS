@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this analysis, please cite it as below."
+title: "AON single-nucleus RNA-seq: molecular characterization of Anterior Olfactory Nucleus glutamatergic populations"
+abstract: >-
+  Single-nucleus RNA-seq characterization of the dorsolateral, contralaterally-projecting
+  glutamatergic population of the mouse Anterior Olfactory Nucleus (AON). An in-house 10x
+  snRNA-seq library is paired with the Allen Brain Cell Atlas (MERFISH + 10x Whole Mouse
+  Brain) as a spatial and genome-wide reference. Projection status is not measured. A
+  dorsolateral position is used as a spatial proxy for projection identity, examined through
+  candidate marker genes rather than asserted. Two spatial axes are reported for what each
+  measures. Dorsolateral versus ventromedial is the projection-relevant contrast (primary),
+  and anteroposterior is the stronger overall molecular axis (a robustness check). Donor-level
+  pseudobulk DESeq2 on the Allen ABC Atlas cohort provides the differential-expression result.
+  In-house clustering and annotation rest on the single AON library.
+type: software
+authors:
+  - family-names: Sharma
+    given-names: Tisya
+keywords:
+  - single-nucleus RNA-seq
+  - snRNA-seq
+  - anterior olfactory nucleus
+  - dorsolateral projection neurons
+  - candidate marker genes
+  - Allen Brain Cell Atlas
+  - pseudobulk
+  - DESeq2
+  - MERFISH
+  - Scanpy
+license: MIT
+repository-code: "https://github.com/tisyasharma/AON_SnRNASeq_TS"
+version: "0.1.0"
+date-released: "2026-03-15"

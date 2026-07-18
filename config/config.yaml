@@ -1,0 +1,54 @@
+# Pipeline parameters for the AON snRNA-seq Snakemake workflow
+# The Snakemake driver and notebook 02 read parameters from here
+
+paths:
+  aon_10x: "data/aon_10x/filtered_feature_bc_matrix.h5"
+  candidate_genes: "data/aon_10x/Candidate_Genes.csv"
+  allen_10x_meta: "data/allen_brain_atlas/10x_cell_metadata_with_group_membership.csv"
+  allen_merfish_meta: "data/allen_brain_atlas/merfish_cell_metadata_with_group_membership.csv"
+  allen_raw_matrix: "data/allen_brain_atlas/abc_cache/expression_matrices/WMB-10Xv2/20230630/WMB-10Xv2-OLF-raw.h5ad"
+  allen_log2_matrix: "data/allen_brain_atlas/WMB-10Xv2-OLF-log2.h5ad"
+  # checkpoints produced by one notebook and read by a later one
+  aon_post_decontx: "data/aon_10x/AON_post_decontx.h5ad"
+  aon_preprocessed: "data/aon_10x/AON_preprocessed.h5ad"
+  results_dir: "results"
+
+qc:
+  min_genes: 500
+  max_genes: 6000
+  pct_counts_mt: 2
+  min_cells: 3
+
+decontx:
+  max_iter: 120
+
+clustering:
+  n_hvg: 2000
+  n_pcs: 30
+  n_neighbors: 15               # clustering KNN graph (feeds Leiden)
+  n_neighbors_embedding: 50      # embedding-only KNN graph (feeds UMAP layout, not Leiden)
+  umap_min_dist: 0.8            # embedding-only, larger value gives a more connected UMAP layout
+  resolution: 0.1               # recorded outcome of the silhouette sweep, asserted in 02_clustering
+  resolution_sweep: [0.1, 0.2, 0.3, 0.5, 0.8, 1.0]
+
+annotation:
+  expressing_threshold: 0.25
+  mixed_margin: 0.15
+
+spatial:
+  # posterior/anterior supertype boundary, midpoint of the two straddling supertype median Z
+  z_threshold: 11.6
+
+de:
+  min_cells: 10             # primary pseudobulk cell-count floor
+  min_cells_sweep: [10, 20, 30]
+  min_count: 10             # per-group summed-count pre-filter
+  fdr: 0.05
+  log2fc: 1.0
+
+enrichment:
+  gene_sets:
+    - "GO_Biological_Process_2021"
+    - "KEGG_2019_Mouse"
+    - "Reactome_2022"
+  organism: "mouse"

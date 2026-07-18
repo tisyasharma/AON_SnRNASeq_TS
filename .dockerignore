@@ -1,0 +1,23 @@
+# Version control and tooling
+.git
+.gitignore
+.claude
+.vscode
+.ruff_cache
+.snakemake
+
+# Local-only and third-party material, never distribute
+reference_pdfs
+archive
+docs/biological_validation.md
+docs/grounding_notes.md
+
+# Large data and regenerable outputs, the pipeline recreates these
+data
+results
+output
+
+# Python and Jupyter cruft
+__pycache__
+*.pyc
+.ipynb_checkpoints

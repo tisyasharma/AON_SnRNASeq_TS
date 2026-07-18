@@ -1,0 +1,15 @@
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+# The Snakefile is Snakemake DSL, not importable Python, so it is not linted here.
+extend-exclude = ["Snakefile"]
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "B", "UP"]
+# zip(strict=) is noise for fixed-length pairs built one line earlier.
+ignore = ["B905"]
+
+[tool.ruff.lint.per-file-ignores]
+# Notebooks run imports after a first markdown cell, use expression statements for
+# display, and carry longer lines than the shared module, so relax those here.
+"notebooks/*.ipynb" = ["E402", "B018", "E501", "B007", "E731"]
