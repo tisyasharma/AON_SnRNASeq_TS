@@ -1,6 +1,6 @@
 # Molecular Characterization of the Mouse Anterior Olfactory Nucleus
 
-[![CI](https://github.com/tisyasharma/AON_SnRNASeq_TS/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/tisyasharma/AON_SnRNASeq_TS/actions/workflows/ci.yml)
+[![CI](https://github.com/tisyasharma/mouse-aon-transcriptomics/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/tisyasharma/mouse-aon-transcriptomics/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A reproducible single-nucleus RNA-seq workflow that integrates one in-house 10x AON library with the Allen Brain Cell Atlas to characterize AON cell populations and test a predefined marker signature for a dorsolateral glutamatergic population.

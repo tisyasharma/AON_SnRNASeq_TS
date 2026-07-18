@@ -28,6 +28,6 @@ keywords:
   - MERFISH
   - Scanpy
 license: MIT
-repository-code: "https://github.com/tisyasharma/AON_SnRNASeq_TS"
+repository-code: "https://github.com/tisyasharma/mouse-aon-transcriptomics"
 version: "0.1.0"
 date-released: "2026-03-15"
