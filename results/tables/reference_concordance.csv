@@ -1,0 +1,23 @@
+leiden,best_subclass,spearman,abc_neurotransmitter,inhouse_call,n_nuclei,abc_nt
+0,009 L2/3 IT PIR-ENTl Glut,0.811,Glut,Excitatory,930,Glut
+1,063 STR D1 Sema5a Gaba,0.838,GABA,Inhibitory,2197,GABA
+2,061 STR D1 Gaba,0.832,GABA,Inhibitory,4957,GABA
+3,062 STR D2 Gaba,0.831,GABA,Inhibitory,3660,GABA
+4,114 COAa-PAA-MEA Barhl2 Glut,0.794,Glut,Inhibitory,3877,Glut
+5,030 L6 CT CTX Glut,0.857,Glut,Excitatory,1152,Glut
+6,009 L2/3 IT PIR-ENTl Glut,0.832,Glut,Excitatory,2604,Glut
+7,080 CEA-AAA-BST Six3 Sp9 Gaba,0.834,GABA,Inhibitory,3501,GABA
+8,061 STR D1 Gaba,0.803,GABA,Inhibitory,331,GABA
+9,052 Pvalb Gaba,0.79,GABA,Inhibitory,406,GABA
+10,060 OT D3 Folh1 Gaba,0.821,GABA,Inhibitory,847,GABA
+11,053 Sst Gaba,0.84,GABA,Inhibitory,1122,GABA
+12,061 STR D1 Gaba,0.771,GABA,Inhibitory,1118,GABA
+13,001 CLA-EPd-CTX Car3 Glut,0.843,Glut,Excitatory,604,Glut
+14,010 IT AON-TT-DP Glut,0.834,Glut,Excitatory,1444,Glut
+15,049 Lamp5 Gaba,0.835,GABA,Inhibitory,416,GABA
+16,002 IT EP-CLA Glut,0.835,Glut,Excitatory,1259,Glut
+17,114 COAa-PAA-MEA Barhl2 Glut,0.753,Glut,Inhibitory,175,Glut
+18,066 NDB-SI-ant Prdm12 Gaba,0.802,GABA,Inhibitory,1244,GABA
+19,007 L2/3 IT CTX Glut,0.819,Glut,Excitatory,612,Glut
+20,045 OB-STR-CTX Inh IMN,0.708,GABA,Unassigned,337,GABA
+21,032 L5 NP CTX Glut,0.801,Glut,Excitatory,159,Glut

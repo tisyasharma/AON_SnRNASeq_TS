@@ -1,0 +1,23 @@
+leiden,cell_type,top_markers,top_gene,top_log2fc,top_padj,n_markers_sig,flag
+0,Excitatory,"Ntng1, Ptprd, Robo2, Cntn5, Rims1",Ntng1,5.72,0.0,688,ok
+1,Inhibitory,"Foxp2, Pbx3, Adarb2, Meis2, Erbb4",Foxp2,4.08,0.0,255,ok
+2,Inhibitory,"Rarb, Cacna2d3, Gm10754, Stox2, Pde7b",Rarb,3.13,0.0,504,ok
+3,Inhibitory,"Foxp1, Drd2, Phactr1, Cacnb2, Dgkb",Foxp1,2.74,0.0,410,ok
+4,Inhibitory,"Ube3a, Dpp10, Cdh18, Nrxn1, Ptprd",Ube3a,1.26,0.0,107,ok
+5,Excitatory,"Etl4, Khdrbs3, Dpp10, Hs3st4, Slc1a2",Etl4,3.66,0.0,687,ok
+6,Excitatory,"Pdzrn3, Tafa1, Ptprd, Tafa2, Arpp21",Pdzrn3,4.94,0.0,728,ok
+7,Inhibitory,"Meg3, Usp29, Snhg11, Dscam, Slc8a1",Meg3,0.97,0.0,909,ok
+8,Inhibitory,"Sgcd, Wdfy3, Sox2ot, Zbtb20, Syt6",Sgcd,2.94,1.5322948736291191e-148,406,ok
+9,Inhibitory,"Il1rapl2, Nxph1, Tcf4, Grip1, Astn2",Il1rapl2,6.22,5.109670604180893e-250,517,ok
+10,Inhibitory,"Fat3, Ust, Plcb1, Necab1, Esrrg",Fat3,2.14,0.0,256,ok
+11,Inhibitory,"Kcnc2, Sox6, Grip1, Nxph1, Kcnmb2",Kcnc2,4.47,0.0,744,ok
+12,Inhibitory,"Sgcd, Sox2ot, Pde1a, Negr1, Wdfy3",Sgcd,4.55,0.0,350,ok
+13,Excitatory,"Ntng2, Cadps2, Tmem163, Nr4a2, Chrm3",Ntng2,5.7,0.0,815,ok
+14,Excitatory,"Nfib, Pex5l, Dpp10, Gria3, Ext1",Nfib,3.68,0.0,700,ok
+15,Inhibitory,"Adarb2, Grip1, Erbb4, Zfp536, Tcf4",Adarb2,6.05,5.412487397472379e-254,505,ok
+16,Excitatory,"Khdrbs3, Satb2, Dpp10, Ext1, Prickle1",Khdrbs3,3.2,0.0,857,ok
+17,Inhibitory,"Ctnna2, Asic2, Elavl2, Inpp4b, Cpne4",Ctnna2,2.84,4.6391151028554345e-108,787,ok
+18,Inhibitory,"Snhg11, Elavl2, Meg3, Dscam, Cacna2d2",Snhg11,1.08,0.0,1112,ok
+19,Excitatory,"Rgs6, Car10, Kcnip4, Mef2c, Enpp2",Rgs6,3.57,0.0,808,ok
+20,Unassigned,"Malat1, Gm42418, Pcdh9, Cdh19, Mag",Malat1,2.0,2.1294408045237184e-203,34,ok
+21,Excitatory,"Tshz2, Adcy2, Vwc2l, Rgs6, Frmpd4",Tshz2,6.22,1.5360022997829224e-98,379,ok
