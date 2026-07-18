@@ -301,7 +301,7 @@ The major discordant cluster is retained as inhibitory because it expresses `Gad
 
 ### Probabilistic scANVI transfer
 
-The supplementary scANVI notebook transfers ABC OLF subclass labels at the cell level and records posterior confidence. Low-confidence cells can therefore be marked as unassignable rather than force-mapped.
+The supplementary scANVI notebook transfers ABC OLF subclass labels at the cell level and records posterior confidence. Every cell still receives a predicted label; the recorded confidence flags low-confidence, heterogeneous mappings, such as the major discordant cluster, rather than leaving cells unlabelled.
 
 This GPU step is outside the Snakemake DAG. Its cluster-level confidence summaries are used as a supplementary check on the correlation-based concordance analysis.
 
