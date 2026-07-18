@@ -15,7 +15,7 @@ A reproducible single-nucleus RNA-seq workflow that integrates one in-house 10x 
 | Spatial mapping | ABC Atlas MERFISH | Anteroposterior position is the dominant molecular axis; dorsolateral position is a weaker, projection-relevant proxy |
 | Differential expression | ABC Atlas 10x OLF cohort, 10 paired donors | 1,347 genes at FDR < 0.05 and \|log2FC\| > 1 in the dorsolateral versus ventromedial contrast |
 | Candidate-marker test | Eight predefined genes | All eight have positive dorsolateral effect estimates; six pass FDR < 0.05 and five pass both the FDR and effect-size thresholds |
-| Reference concordance | 171,284 ABC Atlas reference cells | Neurotransmitter-class agreement for 19 of 21 neuronal clusters, representing 88% of neuronal nuclei |
+| Reference concordance | 171,284 labelled ABC Atlas reference cells before subclass-size filtering | Neurotransmitter-class agreement for 19 of 21 neuronal clusters, representing 88% of neuronal nuclei |
 
 <p align="center">
   <img src="results/figures_final/main/Fig4_DE.png" width="90%" alt="Paired donor-level pseudobulk differential-expression results for dorsolateral versus ventromedial AON glutamatergic populations">
@@ -31,7 +31,7 @@ The anterior olfactory nucleus coordinates bilateral olfactory processing, but t
 
 1. Which neuronal populations are present in an in-house AON single-nucleus library?
 2. Where do AON glutamatergic transcriptomic populations lie in the Allen Brain Cell Atlas spatial reference?
-3. Does a predefined eight-gene candidate panel mark a reproducible dorsolateral molecular signature?
+3. Does a predefined eight-gene candidate panel show a consistent dorsolateral molecular signature?
 4. How well do the in-house annotations agree with an independent whole-brain reference?
 
 The analysis keeps three concepts separate throughout:
@@ -43,9 +43,9 @@ The analysis keeps three concepts separate throughout:
 ## Analytical design
 
 ```mermaid
-flowchart TD
+flowchart LR
     A[In-house 10x AON nuclei] --> B[01: QC and DecontX]
-    B --> C[02: Scrublet, normalization, PCA, Leiden, annotation]
+    B --> C[02: Clustering and annotation]
 
     D[ABC Atlas MERFISH] --> E[03: Spatial grouping]
     F[ABC Atlas 10x OLF] --> G[04: Paired donor pseudobulk DESeq2]
@@ -53,13 +53,15 @@ flowchart TD
     G --> H[05: Candidate-set and pathway enrichment]
 
     C --> I[06: Correlation-based reference concordance]
-    C --> J[07: scANVI label transfer, optional GPU step]
+    F --> I
+
+    C --> J[07: scANVI label transfer, optional GPU]
+    F --> J
 
     C --> K[08: Curated figure composition]
     E --> K
     G --> K
     H --> K
-    I --> K
     J --> K
 ```
 
@@ -115,14 +117,14 @@ All eight candidate genes have positive dorsolateral effect estimates. Only `Adc
 
 ### 4. Independent reference checks expose disagreement instead of hiding it
 
-Correlation-based label transfer reproduces the in-house excitatory or inhibitory call for 19 of 21 neuronal clusters. The largest disagreement is concentrated in a GABAergic cluster whose best whole-transcriptome correlation is an unmatched glutamatergic reference subclass. Marker expression and anatomical context support retaining the in-house inhibitory call.
+Correlation-based label transfer agrees with the in-house excitatory or inhibitory call for 19 of 21 neuronal clusters. The largest disagreement is concentrated in a GABAergic cluster whose best whole-transcriptome correlation is an unmatched glutamatergic reference subclass. Marker expression and anatomical context support retaining the in-house inhibitory call.
 
-A supplementary scANVI analysis provides per-cell posterior confidence and highlights low-confidence or discordant mappings instead of forcing every nucleus into a reference label.
+A supplementary scANVI analysis records per-cell posterior confidence and shows that the major discordant cluster maps heterogeneously and with lower confidence than most clusters.
 
 <p align="center">
-  <img src="results/figures_final/main/Fig6_reference_concordance.png" width="90%" alt="Probabilistic reference mapping flags the single discordant cluster rather than mislabelling it">
+  <img src="results/figures_final/main/Fig6_reference_concordance.png" width="90%" alt="Probabilistic reference mapping shows the lower-confidence, heterogeneous mapping of the major discordant cluster">
   <br>
-  <em>Probabilistic reference mapping (scANVI) corroborates the annotation and flags the single discordant cluster rather than mis-labelling it.</em>
+  <em>Probabilistic reference mapping reveals the lower-confidence, heterogeneous mapping of the major discordant cluster.</em>
 </p>
 
 ## Repository structure
@@ -165,7 +167,7 @@ A supplementary scANVI analysis provides per-cell posterior confidence and highl
 | 05 | [`notebooks/05_enrichment.ipynb`](notebooks/05_enrichment.ipynb) | Candidate-set over-representation and supporting pathway enrichment |
 | 06 | [`notebooks/06_reference_concordance.ipynb`](notebooks/06_reference_concordance.ipynb) | Correlation-based transfer of ABC Atlas reference labels to in-house clusters |
 | 07 | [`notebooks/07_scanvi_label_transfer.ipynb`](notebooks/07_scanvi_label_transfer.ipynb) | Optional GPU-based probabilistic label transfer; outside the Snakemake DAG |
-| 08 | [`notebooks/08_figure_composition.py`](notebooks/08_figure_composition.py) | Rebuilds the curated main and supplementary figure panels from analysis outputs |
+| 08 | [`notebooks/08_figure_composition.py`](notebooks/08_figure_composition.py) | Builds the six main figures, two standalone UMAPs, and supplementary Figures S1–S2 from analysis outputs |
 
 ## Reproducing the analysis
 
@@ -190,8 +192,11 @@ Paths are centralized in [`config/config.yaml`](config/config.yaml).
 | ABC MERFISH cell metadata | `data/allen_brain_atlas/merfish_cell_metadata_with_group_membership.csv` | Public ABC Atlas release `20230630` |
 | ABC OLF raw counts | Path defined by `allen_raw_matrix` in `config/config.yaml` | Public ABC Atlas release `20230630` |
 | ABC OLF log2 matrix | `data/allen_brain_atlas/WMB-10Xv2-OLF-log2.h5ad` | Public ABC Atlas release `20230630` |
+| Integrated scANVI query/reference object | `data/aon_10x/scanvi_input.h5ad` | Required only for stage 07; not generated by the Snakemake DAG |
 
 Large `.h5`, `.h5ad`, and `.rds` files are intentionally excluded from Git.
+
+The public ABC Atlas files (metadata and the `WMB-10Xv2-OLF` matrices, release `20230630`) are downloaded with the pinned [`abc_atlas_access`](https://github.com/AllenInstitute/abc_atlas_access) package into `data/allen_brain_atlas/`. A scripted downloader for one-command setup is a planned addition.
 
 ### 3. Validate and run the core DAG
 
@@ -229,7 +234,7 @@ The final composed figures are generated separately from the core Snakemake DAG:
 python notebooks/08_figure_composition.py
 ```
 
-This step requires the relevant intermediate objects and result tables, including the in-house preprocessed AnnData object for figures that display the in-house atlas.
+This builds the six main figures, the two standalone UMAPs, and supplementary Figures S1–S2 (S3–S7 are per-notebook outputs, not produced here). It requires the relevant intermediate objects and result tables, including the in-house preprocessed AnnData object for figures that display the in-house atlas.
 
 ### Container execution
 

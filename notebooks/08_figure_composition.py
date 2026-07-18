@@ -17,10 +17,10 @@ Requires: scanpy/anndata, pydeseq2 (Fig 4 refits DESeq2 for LFC shrinkage),
 matplotlib, colorcet, adjustText (Fig S2), scipy — see environment.yml.
 
 Coverage: this script composes the 6 main figures, the 2 standalone UMAPs, and
-supplement Fig S1 (QC) and Fig S2 (DE robustness). Supplement Fig S3–S7 are direct
-per-notebook outputs copied into supplement/ (S3 DE diagnostics, S4 projection
-markers, S5 candidate signature — from notebooks 04/02; S6 DecontX sensitivity,
-S7 correlation-concordance heatmap — from the review analyses), not re-composed here.
+supplement Fig S1 (QC) and Fig S2 (DE robustness). Supplement Fig S3–S7 (S3 DE
+diagnostics, S4 projection markers, S5 candidate signature, S6 DecontX sensitivity,
+S7 correlation-concordance heatmap) are separate per-notebook / review-analysis
+outputs and are neither produced nor copied by this script.
 """
 
 import sys
